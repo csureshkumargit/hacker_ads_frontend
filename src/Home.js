@@ -30,7 +30,7 @@ class Home extends React.Component {
     componentDidMount() {
 
         axios({
-            url: 'http://localhost:9092/products',
+            url: 'http://hackerads-db.herokuapp.com/products',
             method: "GET",
             headers: {
                 "content-type": "application/json"
@@ -54,7 +54,7 @@ class Home extends React.Component {
         }
         console.log('np', newProduct);
         axios({
-            url: 'http://localhost:9092/products',
+            url: 'http://hackerads-db.herokuapp.com/products',
             method: "POST",
             data: newProduct,
             headers: {
@@ -73,7 +73,7 @@ class Home extends React.Component {
         }
         console.log('np', addinStatistics);
         axios({
-            url: 'http://localhost:9092/statistics',
+            url: 'http://hackerads-db.herokuapp.com/statistics',
             method: "PUT",
             data: addinStatistics,
             headers: {
@@ -87,7 +87,7 @@ class Home extends React.Component {
     showstatisticsCount = () => {
         console.log('hi')
         axios({
-            url: 'http://localhost:9092/statistics',
+            url: 'http://hackerads-db.herokuapp.com/statistics',
             method: "GET",
             headers: {
                 "content-type": "application/json"
